@@ -32,7 +32,7 @@ class ChatInput extends StatelessWidget {
           const SizedBox(width: 0),
           CupertinoButton(
             padding: EdgeInsets.zero,
-            child: const Icon(CupertinoIcons.arrow_right_circle_fill, size: 40, color: Colors.blue),
+            child: const Icon(CupertinoIcons.arrow_right_circle_fill, size: 40, color: CupertinoColors.systemGrey),
             onPressed: () {},
           ),
         ],

@@ -41,7 +41,7 @@ class _TypingIndicator extends State<TypingIndicator>
             return Transform.scale(
               scale: scale,
             child :Container(
-              margin: const EdgeInsets.all(2),
+              margin: const EdgeInsets.all(1),
               width: 10,
               height: 10,
               decoration: BoxDecoration(

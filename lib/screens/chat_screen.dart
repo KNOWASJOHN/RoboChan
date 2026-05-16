@@ -4,6 +4,7 @@ import 'package:robochan/theme/theme.dart';
 import 'package:robochan/widgets/text_input.dart';
 import 'package:robochan/widgets/header.dart';
 import 'package:robochan/widgets/typing_indicator.dart';
+import 'package:robochan/widgets/user_message.dart';
 
 class ChatScreen extends StatelessWidget {
   const ChatScreen({super.key});
@@ -17,7 +18,18 @@ class ChatScreen extends StatelessWidget {
           children: [
             const Header(),
             Expanded(child: Container()),
-            Center(child: TypingIndicator()),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Padding(padding: EdgeInsets.all(10), child: MessageBubble()),
+              ],
+            ),
+            Row(
+              children: [
+                Padding(padding: EdgeInsets.all(20)),
+                TypingIndicator(),
+              ],
+            ),
             ChatInput(),
           ],
         ),
