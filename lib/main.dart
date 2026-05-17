@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/cupertino.dart';
 import 'app/app.dart';
+import 'package:provider/provider.dart';
 import 'screens/chat_screen.dart';
+import 'providers/chat_provider.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() async {
@@ -13,6 +14,12 @@ void main() async {
   ]);
 
   runApp(
-    const CupertinoApp(debugShowCheckedModeBanner: false, home: ChatScreen()),
+    ChangeNotifierProvider(
+      create: (context) => ChatProvider(),
+      child: const CupertinoApp(
+        debugShowCheckedModeBanner: false,
+        home: ChatScreen(),
+      ),
+    ),
   );
 }

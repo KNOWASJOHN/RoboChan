@@ -1,10 +1,11 @@
 import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:robochan/theme/theme.dart';
 
 class MessageBubble extends StatelessWidget {
-  const MessageBubble({super.key});
+  final String text;
+  final bool isUser;
+  const MessageBubble({super.key, required this.text, required this.isUser});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +22,10 @@ class MessageBubble extends StatelessWidget {
               ),
               child: Padding(
                 padding: EdgeInsets.all(10),
-                child: Text("Hai RoboChan", style: AppTheme.PrimaryText.copyWith( fontSize: 12)),
+                child: Text(
+                  text,
+                  style: AppTheme.PrimaryText.copyWith(fontSize: 12),
+                ),
               ),
             ),
           ),
