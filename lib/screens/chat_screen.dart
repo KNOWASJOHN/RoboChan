@@ -6,7 +6,6 @@ import 'package:robochan/widgets/text_input.dart';
 import 'package:robochan/widgets/header.dart';
 import 'package:robochan/widgets/typing_indicator.dart';
 import 'package:robochan/widgets/user_message.dart';
-import 'package:robochan/models/message_model.dart';
 
 class ChatScreen extends StatelessWidget {
   const ChatScreen({super.key});

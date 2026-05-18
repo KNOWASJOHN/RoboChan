@@ -10,8 +10,11 @@ class MessageBubble extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: isUser? MainAxisAlignment.end : MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.end,
       children: [
+        Flexible(
+          child: 
         ClipRRect(
           child: BackdropFilter(
             filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
@@ -29,6 +32,7 @@ class MessageBubble extends StatelessWidget {
               ),
             ),
           ),
+        ),
         ),
       ],
     );
