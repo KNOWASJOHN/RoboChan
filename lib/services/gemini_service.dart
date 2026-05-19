@@ -1,3 +1,4 @@
+import 'package:flutter/services.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:google_generative_ai/google_generative_ai.dart';
 
@@ -6,7 +7,10 @@ class GeminiService {
 
   Future<String> getResponse(String prompt) async{
     try{
-      final model =GenerativeModel(model: 'gemini-2.5-flash-lite', apiKey: apiKey);
+      final robochan = await rootBundle.loadString('Robochan.txt');
+      final model =GenerativeModel(model: 'gemini-3.1-flash-lite', apiKey: apiKey,
+      systemInstruction: Content.text(robochan)
+      );
 
       final response = await model.generateContent([
         Content.text(prompt)

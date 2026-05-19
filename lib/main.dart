@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'app/app.dart';
 import 'package:provider/provider.dart';
 import 'screens/chat_screen.dart';
 import 'providers/chat_provider.dart';
